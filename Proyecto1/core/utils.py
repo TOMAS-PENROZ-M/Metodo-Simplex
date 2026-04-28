@@ -29,9 +29,6 @@ def get_float_list(msg, expected_qty):
             print("Error: Todos los valores deben ser numéricos (enteros o decimales).")
 
 def build_problem_from_console():
-    """
-    Guía interactiva para ingresar el problema de optimización.
-    """
     print("\n--- INGRESO INTERACTIVO DE DATOS ---")
     
     # 1. Minimizar o Maximizar
@@ -65,18 +62,6 @@ def build_problem_from_console():
     return problem
 
 def build_problem_from_json(filepath):
-    """
-    Opcional: Lee un PPL desde un archivo JSON.
-    Ejemplo JSON:
-    {
-       "type": "max",
-       "objective": [3, 2],
-       "constraints": [
-           {"coeffs": [2, 1], "bound": 18},
-           {"coeffs": [2, 3], "bound": 42}
-       ]
-    }
-    """
     if not os.path.exists(filepath):
         raise FileNotFoundError(f"El archivo {filepath} no existe.")
         

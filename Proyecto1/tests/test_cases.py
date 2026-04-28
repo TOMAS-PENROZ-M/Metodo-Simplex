@@ -1,11 +1,8 @@
 import unittest
 import numpy as np
-
-# Adjust sys path so we can run this directly if needed
 import sys
 import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-
 from core.model import ProblemaLineal
 from solvers.simplex import SolucionadorSimplex
 from visualization.graphic import SolucionadorGrafico
